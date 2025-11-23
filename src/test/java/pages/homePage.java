@@ -43,8 +43,14 @@ public class homePage {
     public WebElement chkPrivacidadDatos;
     @FindBy(xpath = "//*[@id=\"customer-form\"]/footer/button")
     public WebElement bntGuardarNuevoRegistro;
-    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[2]/span")
-    public WebElement usuarioLogin;
+    @FindBy(xpath = "//*[@id=\"field-email\"]")
+    public WebElement txtIngresarCorreo;
+    @FindBy(xpath = "//*[@id=\"field-password\"]")
+    public WebElement txtIngresarPassword;
+    @FindBy(xpath = "//*[@id=\"login-form\"]/div/div[2]/div[1]/div/span/button")
+    public WebElement bntMostrarPassLogin;
+    @FindBy(xpath = "//*[@id=\"submit-login\"]")
+    public WebElement bntlogin;
 
 
     //
@@ -103,6 +109,24 @@ public class homePage {
 
     public void clickGuardarNuevoRegistro(){
         bntGuardarNuevoRegistro.click();
+    }
+
+    //Scenario: Realizar el login en la web qalab
+
+    public void ingresarCorreo(String texto){
+        txtIngresarCorreo.sendKeys(texto);
+    }
+
+    public void ingresarPassword(String texto){
+        txtIngresarPassword.sendKeys(texto);
+    }
+
+    public void mostrarPassLogin(){
+        bntMostrarPassLogin.click();
+    }
+
+    public void iniciarSesion(){
+        bntlogin.click();
     }
 
 }

@@ -64,5 +64,18 @@ public class loginStepDefinition {
         String textLogin = "My Store";
         Assert.assertEquals(loginTitle,driver.getTitle());
         }
+
+    //Scenario: Login en la web
+    @And ("ingreso mi usuario y contraseña registrado")
+    public void ingreso_mi_usuario_y_contraseña_registrado(){
+        HomePage.ingresarCorreo("jorge.huamanimontes@gmail.com");
+        HomePage.ingresarPassword("Calidad123.");
+        HomePage.mostrarPassLogin();
     }
+
+    @And("doy click en el boton iniciar sesion")
+    public void doy_click_en_el_boton_iniciar_sesion(){
+        HomePage.iniciarSesion();
+    }
+}
 
