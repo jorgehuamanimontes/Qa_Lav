@@ -13,5 +13,5 @@ Feature: Product - Store
       When doy click en la opcion iniciar sesion
       And ingreso mi usuario y contraseña registrado
       And doy click en el boton iniciar sesion
-      Then deberia mostrar mi usuario y contraseña logeado en la pantalla
+      Then deberia visualizar mi usuario logeado en la pantalla
 
